@@ -48,6 +48,7 @@ categories:
 ## skywalking的实现
 
 skywalking作为一个APM实现，主要是由两部分实现，agent（采集tracing和metric数据）和后端的collector（通过RPC接受agent数据然后分析汇总放入存储容器中），具体可以参考如下的架构图：
+
 ![架构图](/images/20181126/架构图.png)
 
 而在skywalking的agent和collector的设计中，均采用了微核+插件的设计模式，保证了skywalking的扩展性。
@@ -60,15 +61,20 @@ skywalking的agent核心代码非常少，主要负责三个方面的业务：
  - 对接java agent启动器，加载满足规范的增强器并通过bytebuddy进行增强，加载满足规范的本地服务并控制他们的生命周期
  
 由于bytebuddy已经提供了java agent的支持，所以agent的开发主要集中在增强器规范的定制和具体实现的加载。增强器的规范可以参考下面的规范：
+
 ![插件规范](/images/20181126/插件规范.png)
+
 最终主要提供了对增强器的适配场景（enhancePlugin）、拦截器的具体实现(interceptPint)的统一规范和标准实现。其中enhancePlugin的模式基本和增强器的设计基本一致的：
+
 ![增强器规范](/images/20181126/增强器规范.png)
+
 而具体实现则由几个spi接口实现：
  - InstanceConstructorInterceptor：拦截增强构造方法
  - InstanceMethodsAroundInterceptor：拦截增强普通方法
  - StaticMethodsAroundInterceptor：拦截增强静态方法
 
  具体格式参考：
+ 
 ![切面](/images/20181126/切面.png)
  
 值得关注的是在增强器的适配场景中，设计者增加了witness的配置（参考：org.apache.skywalking.apm.agent.core.plugin.AbstractClassEnhancePluginDefine#witnessClasses），即通过检查某个class是否被加载过来做版本的适配。
@@ -87,4 +93,5 @@ skywalking的collector和agent的实现模式类似，不过在collector中插�
  - 缺少主流程引导，业务梳理困难
 
 所以也有另外一种模式，可以参考dubbo，通过清晰的流程和边界来实现核心业务，同时预留一定的扩展SPI，通过加载不同的SPI实现来实现可扩展，参考：
+
 ![dubbo](/images/20181126/dubbo.png)
