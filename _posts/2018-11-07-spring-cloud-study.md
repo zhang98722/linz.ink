@@ -5,6 +5,7 @@ date:   2018-11-07
 categories: 
   - Spring Cloud
   - 微服务
+comments: false
 ---
 
 经过之前的一次分享和讨论，我们决定使用SpringCloud作为我们的微服务基础框架，所以我们花了一段时间对整个SpringCloud的生态进行了一次调研，也对一些基础组件进行了测试和不同技术选型的对比。
