@@ -10,6 +10,6 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://linz.ink" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 github_username:  zhang98722
-
+excerpt_separator:  '<!-- more -->'
 # Build settings
 markdown: kramdown

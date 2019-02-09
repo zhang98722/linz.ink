@@ -1,11 +1,13 @@
 ---
 layout: page
-title: About
+title: 关于我
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+生于四川绵阳三台县某个小镇，自小跟随外公外婆生活，无法无天之下过早的接触了电脑，然后一发不可收拾，结下不解之缘。小学就游走于各个电脑学习室，初中传奇精通，高中搭私服看黑客x档案，最后发现用别人的工具和脚本一点意义都没有，于是报了个计算机相关专业，总算走上正道。
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+然而受限于环境和智商，始终不得其法，已进中年还是一个苦逼的程序猿，撑死算是一个热爱搬砖的程序猿。之前很多次想过自己写点博客，无奈腹中无墨，最终都胎死腹中，希望这次能够坚持下去，一方面对自己有一个总结，一方面也是和其他人的一种交流途径，万一遇到土豪拉我一把让我一夜暴富怎么办...
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+这就是我,一个平凡却不甘于平凡的码农一枚:
+
+- mail:zhang98722@qq.com

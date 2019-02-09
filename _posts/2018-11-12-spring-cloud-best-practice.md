@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  SpringCloud微服务最佳实践
-date:   2018-10-12 00:00:00 +0800
+date:   2018-11-12
 categories: 
   - Spring Cloud
   - 微服务
@@ -14,6 +14,8 @@ categories:
  - 注册中心：Consul集群 （为后续的部署和服务分离做准备）
  - RPC组件：Ribbon + Hystrix + OpenFeign + Apache Httpclient （标准使用）
  - 监控管理：Sleuth + [SkyWalker](https://github.com/apache/incubator-skywalking) + SpringBootAdmin （JVM监控、方法监控、链路跟踪、JMX远程管理）
+
+<!-- more -->
 
 ### 具体实施
 
