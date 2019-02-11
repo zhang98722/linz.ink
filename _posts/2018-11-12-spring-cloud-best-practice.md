@@ -6,7 +6,6 @@ categories:
   - Spring Cloud
   - 微服务
 ---
-
 ### 技术选型
 
 参考[SpringCloud调研报告](http://note.youdao.com/noteshare?id=0dcbb7a6020182021541550a2bda98bc&sub=7D5FD3A5E4684D48B02502B93706E125)，我们的技术选型为：

@@ -16,6 +16,8 @@ comments: false
 
 随着NIO（以Netty为代表）编程模型的兴起，同时函数式（lambda express）、响应式编程（rxJava，projectReactor）生态的慢慢建立，越来越多的程序员开始慢慢熟悉这种不同于以往命令式的编程模型，Spring在5.0时代推出了Spring WebFlux来替代以往基于Servlet模型的Web框架，同时也发布了Spring Cloud Gateway以替代之前的Spring Cloud Zuul。
 
+<!-- more -->
+
 相当于Spring MVC，Spring WebFlux具有如下优势：
 
 - 非阻塞模型，能够用更少的资源（主要是线程），支持更高的并发

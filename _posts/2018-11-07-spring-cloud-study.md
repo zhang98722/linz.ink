@@ -9,7 +9,7 @@ comments: false
 ---
 
 经过之前的一次分享和讨论，我们决定使用SpringCloud作为我们的微服务基础框架，所以我们花了一段时间对整个SpringCloud的生态进行了一次调研，也对一些基础组件进行了测试和不同技术选型的对比。
-<!-- more -->
+
 ### SpringCloud的基础组件
 
 SpringCloud有大量的组件，具体可以参考 [SpringCloud官方网站](https://spring.io/projects/spring-cloud)，虽然看起来多且杂，但是就微服务来说，我们主要关注的还是几个核心方面：
@@ -23,6 +23,8 @@ SpringCloud有大量的组件，具体可以参考 [SpringCloud官方网站](htt
  - 扩展组件
     - sleuth
     - zuul
+
+<!-- more -->
 
 #### 服务发现（Eureka/Consul)
 

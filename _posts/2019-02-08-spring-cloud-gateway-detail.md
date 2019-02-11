@@ -13,6 +13,8 @@ comments: false
 
 Spring Cloud Gateway（以下简称Gateway）是依托于Spring WebFlux的Spring Cloud网关承载的组件，主要负责发布或者聚合接口（对内或者对外的网关），本身业务模型比较简单，以下将从几个方面来对其进行剖析。
 
+<!-- more -->
+
 ## 核心模型
 
 作为Spring WebFlux的扩展，Gateway只是在原有的基础上通过RoutePredicateHandlerMapping拓展出来一个新的分支，具体结构可以参考下图：
