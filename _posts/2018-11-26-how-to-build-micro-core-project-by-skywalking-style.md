@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  从Skywalking看如何设计一个微核+插件式扩展的搞扩展框架
+title:  从Skywalking看如何设计一个微核+插件式扩展的高扩展框架
 date:   2018-11-26
 categories: 
   - SkyWalking
