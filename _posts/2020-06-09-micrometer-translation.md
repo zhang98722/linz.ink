@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  [翻译]Micrometer原理
+title:  【翻译】Micrometer原理
 date:   2020-06-09
 categories: 
   - java
@@ -21,13 +21,16 @@ Micrometer _不是_ 一个分布式的监控系统或者一个事件记录器. A
 
 Micrometer包含一个有可扩展的[SPI](https://en.wikipedia.org/wiki/Service_provider_interface)的核心模块,一系列针对不同监控系统的适配模块(每一个都被称为注册中心/registry)以及一个测试套件。在这个监控系统中，有三个非常需要理解的重要角色：
 
- - 维度（Dimensionality）是指数据指标是否能够通过key/value的标签（tag）来进行增强。如果一个系统不支持多维的监控，它就是分层监控，也就是说它只能支持一个水平的指标名称。而Micrometer在给分层监控进行数据发布的时候，会将tag的key/value降维拼接到指标名称中（译者注：这里比较难翻译，其实就是指系统监控的维度能否嵌套，如果不能通过tag来进行嵌套，则只能把原本通过tag来进行区分的子项指标挨个平滑降维变为一个个独立的指标）。
+ - 维度（Dimensionality）是指数据指标是否能够通过key/value的标签（tag）来增强指标名称。如果一个系统不支持多维的监控，它就是分层监控，也就是说它只能支持一个平面的指标名称。而Micrometer在给分层监控进行数据发布的时候，会将tag的key/value展平拼接到指标名称中（译者注：这里比较难翻译，其实就是指系统监控的维度能否嵌套，如果不能通过tag来进行嵌套，则只能把原本通过tag来进行区分的子项指标挨个平滑降维变为一个个独立的指标）。
  
   多维监控系统 | 分层监控系统 
   -|-
   AppOptics, Atlas, Azure Monitor, Cloudwatch, Datadog, Datadog StatsD, Dynatrace, Elastic, Humio, Influx, KairosDB, New Relic, Prometheus, SignalFx, Sysdig StatsD, Telegraf StatsD, Wavefront | Graphite, Ganglia, JMX, Etsy StatsD 
  
- - 频度聚合（Rate aggregation）
+ - 频度聚合（Rate aggregation），在本文中，我们是指按照一个确定的时间频率针对一组样本进行聚合。一些监控系统在处理某些类型的离散样本（例如计数）期望在数据发布前转换为比例，而一些系统期望发送累计值，而一些则不进行处理（译者注：主要是指服务端聚合和客户端聚合）。
+ 
+ 
+ 
  - 发布（Publishing）
 
 ## 3.注册中心/Registry
